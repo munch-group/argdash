@@ -56,7 +56,8 @@ website:
       contents:
         - section: "Overview"
           contents:
-            - pages/overview.ipynb
+            # - pages/overview.ipynb
+            - pages/notebook.ipynb
 
 
 lightbox: true
@@ -98,63 +99,3 @@ quartodoc:
       contents:
         - scriptname
 
-
-# quartodoc:
-#   package: genominterv
-#   style: pkgdown
-#   dir: api
-#   render_interlinks: true
-#   options:
-#     signature_name: full
-#   renderer:
-#     style: markdown
-#     table_style: description-list
-#   sidebar: "api/_sidebar.yml"
-#   css: "api/_styles-quartodoc.css"
-
-#   sections:
-#     - title: Genomic set operations
-#       package: genominterv
-#       desc: |
-#         Set operations on pandas.DataFrames with columns for chromosome, start, and end.
-#       contents:
-#         - interval_diff     
-#         - interval_union   
-#         - interval_intersect 
-#         - interval_collapse
-#     - title: Remapping
-#       package: genominterv.remapping
-#       desc: |
-#         Mapping intervals relative to other coordinates.
-#       contents:        
-#         - interval_distance
-#         - remap_interval_data
-#     - title: Statistics
-#       package: genominterv.stats
-#       desc: Mapping intervals relative to other coordinates.
-#       contents:
-#         - proximity_test        
-#         - jaccard_stat
-#     - title: Decorators
-#       package: genominterv.decorators
-#       desc: |
-#         Utilities for user created genomic intervals and bootstrap tests.
-#       contents:
-#         - genomic 
-#         - bootstrap
-#     - title: Interval set utilities
-#       package: genominterv.interval_set_op
-#       desc: |
-#         Set operations on sorted lists of (start, end) tuples.
-#       contents:
-#         - union 
-#         - diff
-#         - invert
-#         - intersect
-#         - collapse
-#     - title: Interval mapping utilities
-#       package: genominterv.remapping
-#       desc: |
-#         Set operations on sorted lists of (start, end) tuples.
-#       contents:
-#         - remap 

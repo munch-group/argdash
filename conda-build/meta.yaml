@@ -24,7 +24,8 @@ requirements:
     - dash-bootstrap-components
     - pandas
     - networkx
-
+    - jupyter-dash
+    
 channels:  # channels for your library dependencies
   - uibcdf
   - conda-forge

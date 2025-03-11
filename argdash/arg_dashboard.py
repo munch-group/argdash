@@ -188,15 +188,20 @@ layout = html.Div(
                                                             # 'height': 565,
                                                             # 'margin': {'l': 0, 'b': 0, 't': 0, 'r': 0},
                                                                 }
-                                                            },
+                                                            }, style={'height': '85%'}
                                                     ),
-                                    ], className='pretty_container', fluid=True,
+                                    ], className='pretty_container', fluid=True, style={ #'padding': 20,
+                                                                                         'flex-grow': 1, 'height': '100%'}
                                 ),
-                            ], style={'padding': 20, 'flex-grow': 1}
+                            ], style={#'padding-bottom': 20, 
+                                      'flex-grow': 1, 'height': '100%'}
                         ),
                     ], width=8, 
-                    style={'display': 'flex', 'height': 600, 
-                           'flex-direction': 'column', 'background-color': 'blue', 'overflow': 'hidden'}
+                    style={'display': 'flex', #'height': '650', 
+                           'flex-direction': 'column', 
+                        #    'background-color': 'blue',
+                           'overflow': 'hidden'
+                           }
                 ),
 
                 # column for marginal trees
@@ -211,16 +216,18 @@ layout = html.Div(
                                         """), ),                    
                                         dcc.Graph(id='marginal-tree',
                                                     figure={'layout': {
-                                                            'autosize': True,
+                                                            # 'autosize': True,
                                                             # 'title': 'Marginal tree',
                                                             # 'height': 250,
                                                             # 'margin': {'l': 10, 'b': 0, 't': 0, 'r': 0},
                                                                 }
-                                                            },
+                                                            }, style={'height': '85%'}
                                                             ),
                                     ], className='pretty_container',
                                 ),
-                            ], style={'padding': 20, 'padding-left': 0, 'padding-bottom': 0, 'flex-grow': 0.5}
+                            ], style={#'padding': 10, 'padding-left': 0, 'padding-top': 0, 
+                                        'padding-bottom': 20,
+                                      'flex-grow': 0.5, 'height': '50%'}
                         ),
                         dbc.Row(
                             [
@@ -231,22 +238,33 @@ layout = html.Div(
                                         """), ),                    
                                         dcc.Graph(id='ancestral-sequence',
                                                 figure={'layout': {
-                                                            'autosize': True,
-                                                            # 'height': 250,
-                                                        }
-                                                        },),
+                                                            # 'autosize': True,
+                                                            # 'height': 2, 50,
+                                                          }, 
+                                                        }, style={'height': '85%'}
+                                                        ),
                                     ], className='pretty_container',
                                 ),            
-                            ], style={'padding': 20, 'padding-left': 0, 'flex-grow': 0.5, 'height': 300
+                            ], style={# 'padding': 10, 'padding-left': 0, 'padding-bottom': 0, 
+                                      'flex-grow': 0.5, 'height': '50%' #'height': 300
                                     #   'display': 'flex', 'flex-direction': 'column', 'justify-content': 'space-between', 'align-items': 'stretch'
                                       },
                         ),            
                     ], width=4, 
-                style={'display': 'flex', 'height': 600,
-                        'flex-direction': 'column', 'background-color': 'red', 'overflow': 'hidden'}
+                style={'display': 'flex', 'height': '100%',
+                        'flex-direction': 'column', 
+                        # 'background-color': 'red',
+                        'overflow': 'hidden',
+                        'padding-right': 25,
+                        'padding-left': 20}
+                        
                 ),        
             ], 
-            className="g-0", style={'height': 600}
+            className="g-0", style={'height': 650, 'padding-bottom': 20}
+                        #     style={'display': 'flex', 'height': '100%',
+                        # 'flex-direction': 'column', 
+                        # # 'background-color': 'red', 'overflow': 'hidden'
+                        # }
         ),
 
         dbc.Row(
@@ -273,11 +291,11 @@ layout = html.Div(
                                                     marks={str(i): str(i) for i in range(0, 40)}, 
                                                     step=None,
                                                     ),
-                                            ], style={'padding-bottom': 20}
+                                            ], #style={'padding-bottom': 20}
                                         )
                                     ], className='pretty_container'
                                 )
-                            ], style={'padding': 20, 'padding-top': 0},
+                            ], #style={'padding': 20, 'padding-top': 0},
                         )
                     ], width=6
                 ),  
@@ -306,18 +324,18 @@ layout = html.Div(
                                                     marks={0: '0', 1000: '1'},
                                                     pushable=30,
                                                 )
-                                            ], style={'padding-bottom': 20}
+                                            ], #style={'padding-bottom': 20}
                                         ),
                                     ], className='pretty_container', 
                                 ),
-                            ], style={'padding': 20, 'padding-left': 0, 'padding-top': 0}
+                            ], #style={'padding': 20, 'padding-left': 0, 'padding-top': 0}
                         ),
                     ], width=6, align='start',
                 ),
             ],
             className="g-0"
         ),
-    ], style={'padding': 20}
+    ],# style={'padding': 20}
 )
 
 

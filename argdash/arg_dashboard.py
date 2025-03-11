@@ -185,22 +185,24 @@ layout = html.Div(
                                         dcc.Graph(id='arg-figure',
                                                 clear_on_unhover=True,
                                                 figure={'layout': {
-                                                            'height': 565,
+                                                            # 'height': 565,
                                                             # 'margin': {'l': 0, 'b': 0, 't': 0, 'r': 0},
                                                                 }
                                                             },
                                                     ),
                                     ], className='pretty_container', fluid=True,
                                 ),
-                            ], style={'padding': 20}
+                            ], style={'padding': 20, 'flex-grow': 1}
                         ),
                     ], width=8, 
+                    style={'display': 'flex', 'height': 600, 
+                           'flex-direction': 'column', 'background-color': 'blue', 'overflow': 'hidden'}
                 ),
 
                 # column for marginal trees
                 dbc.Col(
                     [
-                        dbc.Container(
+                        dbc.Row(
                             [
                                 dbc.Container(
                                     [
@@ -209,16 +211,18 @@ layout = html.Div(
                                         """), ),                    
                                         dcc.Graph(id='marginal-tree',
                                                     figure={'layout': {
+                                                            'autosize': True,
                                                             # 'title': 'Marginal tree',
-                                                            'height': 250,
+                                                            # 'height': 250,
                                                             # 'margin': {'l': 10, 'b': 0, 't': 0, 'r': 0},
                                                                 }
-                                                            },),
-                                    ], className='pretty_container'
+                                                            },
+                                                            ),
+                                    ], className='pretty_container',
                                 ),
-                            ], style={'padding': 20, 'padding-left': 0, 'padding-bottom': 0}
+                            ], style={'padding': 20, 'padding-left': 0, 'padding-bottom': 0, 'flex-grow': 0.5}
                         ),
-                        dbc.Container(
+                        dbc.Row(
                             [
                                 dbc.Container(
                                     [
@@ -227,17 +231,22 @@ layout = html.Div(
                                         """), ),                    
                                         dcc.Graph(id='ancestral-sequence',
                                                 figure={'layout': {
-                                                    'height': 250,
+                                                            'autosize': True,
+                                                            # 'height': 250,
                                                         }
                                                         },),
-                                    ], className='pretty_container'
+                                    ], className='pretty_container',
                                 ),            
-                            ], style={'padding': 20, 'padding-left': 0}
+                            ], style={'padding': 20, 'padding-left': 0, 'flex-grow': 0.5, 'height': 300
+                                    #   'display': 'flex', 'flex-direction': 'column', 'justify-content': 'space-between', 'align-items': 'stretch'
+                                      },
                         ),            
                     ], width=4, 
+                style={'display': 'flex', 'height': 600,
+                        'flex-direction': 'column', 'background-color': 'red', 'overflow': 'hidden'}
                 ),        
             ], 
-            className="g-0"
+            className="g-0", style={'height': 600}
         ),
 
         dbc.Row(

@@ -260,7 +260,7 @@ layout = html.Div(
                         
                 ),        
             ], 
-            className="g-0", style={'height': 650, 'padding-bottom': 20}
+            className="g-0", style={'height': 650, 'padding-bottom': 20, 'padding-top': 20}
                         #     style={'display': 'flex', 'height': '100%',
                         # 'flex-direction': 'column', 
                         # # 'background-color': 'red', 'overflow': 'hidden'
